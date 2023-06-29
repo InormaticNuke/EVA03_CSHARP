@@ -28,10 +28,10 @@ namespace EVA03_V2
 
             lblResultado.Text =
                                 $"Nombre Vendedor: {NombreVendedor} <br />" +
-                                $"Nombre Juego: {NombreCafe} <br />" +
-                                $"Tipo de Juego: {TipoCafe} <br />" +
+                                $"Nombre Cafe: {NombreCafe} <br />" +
+                                $"Tipo de Cafe: {TipoCafe} <br />" +
                                 $"Cantidad de productos: {Cantidad} <br />" +
-                                $"Precio del Juego: {Precio} <br />" +
+                                $"Precio del producto: {Precio} <br />" +
                                 $"Fecha de compra: {Fecha} <br /> <br />" +
                                 $"Precio Total: ${total}  <br />" +
                                 $"Precio con IVA: ${totalIVA}  <br />";
