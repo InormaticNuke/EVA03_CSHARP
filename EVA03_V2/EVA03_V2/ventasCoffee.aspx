@@ -30,10 +30,10 @@
                     <asp:Label ID="tipoLb" runat="server" Text="Tipo de Cafe"></asp:Label>
                     <asp:DropDownList ID="TipoDDL" runat="server" CssClass="form-control">
                         <asp:ListItem Text=""></asp:ListItem>
-                        <asp:ListItem Text="RPG" Value="rpg"></asp:ListItem>
-                        <asp:ListItem Text="Indie" Value="indie"></asp:ListItem>
-                        <asp:ListItem Text="Rol" Value="rol"></asp:ListItem>
-                        <asp:ListItem Text="Metroidvania" Value="metroidvania"></asp:ListItem>
+                        <asp:ListItem Text="Latte" Value="latte"></asp:ListItem>
+                        <asp:ListItem Text="Cappuccino" Value="cappu"></asp:ListItem>
+                        <asp:ListItem Text="Moccaccino" Value="mocca"></asp:ListItem>
+                        <asp:ListItem Text="Ice Coffee" Value="icecoffee"></asp:ListItem>
                     </asp:DropDownList>
 
                 </div>
