@@ -1,0 +1,53 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Lista de Ordenes</h2>
+
+<div id="CafeContainer"></div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+
+    $(document).ready(function () {
+        obtenerCafe();
+    });
+
+    function obtenerCafe() {
+        $.ajax({
+            type: "GET",
+            url: "@Url.Action("ObtenerCafeJson","Boleta")",
+            dataType: "json",
+            success: function (Boleta) {
+                mostrarBoleta(Boleta);
+            },
+            error: function () {
+                alert("ERRROR: No data");
+            }
+        });
+    }
+
+    function mostrarBoleta(Boleta) {
+        var output = "",
+
+        for (var i = 0; i < Boleta.length; i++) {
+            output += "<div>";
+            output += "<strong> Id Producto: </strong>" + Boleta[i].IdProducto + "<br/>";
+            output += "<strong> Nombre Producto: </strong>" + Boleta[i].NombreCafe + "<br/>";
+            output += "<strong> Tipo: </strong>" + Boleta[i].TipoCafe + "<br/>";
+            output += "<strong> Precio: </strong>" + Boleta[i].Precio + "<br/>";
+            output += "<strong> Id Vendedor: </strong>" + Boleta[i].ClaseVenta.IdVendedor + "<br/>";
+            output += "<strong> Nombre Vendedor: </strong>" + Boleta[i].ClaseVenta.NombreVendedor + "<br/>";
+            output += "<strong> Cantidad </strong>" + Boleta[i].ClaseVenta.CantidadProducto + "<br/>";
+            output += "<strong> Fecha: </strong>" + Boleta[i].ClaseVenta.FechaVenta + "<br/>";
+            output += "</div>";
+            output += "<br />";
+        }
+
+        $("#CafeContainer").html(output);
+    }
+
+</script>
+
